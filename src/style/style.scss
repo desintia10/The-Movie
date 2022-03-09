@@ -1,0 +1,286 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.google.com/specimen/Smooch');
+
+
+body {
+  background-color: #FFA1C9!important;
+  font-family: "Assistant", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+app-bar{
+  .navbar {
+    background-color: #E60965 !important;
+
+    .navbar-brand {
+      font-size: 32px;
+      font-weight: bold;
+      font-family: "Smooch", cursive;
+      color: white;
+    }
+    .navbar-nav a {
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .dropdown{
+      .dropdown-menu{
+        background-color: #E60965 ;
+        .dropdown-item{
+          cursor: pointer;
+          width: 50%;
+          color: white;
+          font-size: 18px;
+          margin-bottom: 5px;
+          &:hover{
+            background-color: palevioletred;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.overlay{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .main-overlay {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    }
+    
+  a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+    
+  .closebtn {
+    position: absolute;
+    top: -10%px;
+    right: 5%;
+    font-size: 80px;
+  }
+    
+  .movie {
+    margin-top: 150px;
+    width: 560px;
+    height: 351px;
+  }
+}
+search-bar{
+  .search-bar .search {
+    width: 80%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    color: white;
+  }
+  
+  #search-button {
+    z-index: 0;
+    background-color: #E60965 ;
+    color: white;
+    max-height: 38px;
+  }
+
+  #search-button:hover {
+    background-color: #FBE5E5;
+  }
+}
+
+movie-list {
+  display: flex;
+  justify-content: center;
+
+  movie-item {
+    display: flex;
+    margin: 0 15px;
+    justify-content: center;
+
+
+    .card {
+      border-color: #FA4EAB;
+      border-radius: 0 !important;
+      max-width: 200px;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+      background-color:#FE83C6;
+
+      .card-body{
+        color: white;
+        min-width: 200px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+        
+      h6{
+        color: white;
+      }
+
+      .card-title{
+        height: 50px;
+        overflow: hidden;
+      }
+
+      .card-img-top {
+        border-radius: 0 !important;
+      }
+
+      img {
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 350px;
+        object-fit: cover;
+      }
+
+      &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 20px #FF5C8D;
+      }
+    }
+
+    
+
+    .vote-average {
+      float: right;
+      font-size: 14px;
+      padding: 4px;
+      border-radius: 3px;
+      background-color: #EFFFFD;
+    }
+
+    .vote-average.orange {
+      color: orange;
+    }
+
+    .vote-average.green {
+      color: green;
+    }
+
+    .vote-average.red {
+      color: red;
+    }
+  }
+}
+
+.modal-content {
+  box-shadow: 0px 0px 15px white;
+  border-color: white;
+
+  .modal-body{
+    detail-item{
+      .over-view {
+        max-height: 400px;
+        overflow: auto;
+      } 
+      .see-movies{
+        background: red;
+        color: white;
+      }
+    }
+    
+  }
+}
+
+pagination-el{
+  .prev-btn{
+      #prev:hover {
+        background: #FF5C8D;
+        border-color: #E60965;
+        color: white;
+        margin: 0;
+      }
+  }
+
+  .current-page {
+    background:#FF5C8D;
+    border-color: #E60965;
+    color: white;
+    margin: 0;
+  }
+
+  .next-btn{
+      #next:hover {
+        background: #FF5C8D;
+        border-color: #E60965;
+        color: white;
+        margin: 0;
+      }
+  }
+}
+
+
+.msg-error {
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (min-width:991px) {
+  .dropdown{
+      
+    .dropdown-menu {
+      background-color:pink;
+      width: 700px !important;
+      height: 250px !important;
+      padding: 10px !important;
+      margin: 0 !important;
+      .dropdown-item{
+        color: white;
+        cursor: pointer;
+        width: 24% !important;
+        padding: 0 !important;
+        margin-bottom: 15px !important;
+        text-align: center;
+
+        &:hover{
+          background-color: white !important;
+          color: black !important;
+        }
+
+      }
+    }
+  
+  }
+}
+@media screen and (min-width:389px) {
+  .dropdown{
+    .dropdown-menu {
+      .dropdown-item{
+        width: 100%;
+        display: inline-block  !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:388px) {
+  .dropdown{
+    .dropdown-menu {
+      .dropdown-item{
+        width: 100% !important;
+        display: block !important;  
+      }
+    }
+  }
+}
